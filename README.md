@@ -1,2 +1,2 @@
-# transaction-logging-application
-Application for users to log transactions made
+# expense-logging-application
+Application for users to log expenses made
