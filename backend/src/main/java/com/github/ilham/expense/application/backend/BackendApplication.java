@@ -1,4 +1,4 @@
-package com.github.ilham.transaction.application.backend;
+package com.github.ilham.expense.application.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
