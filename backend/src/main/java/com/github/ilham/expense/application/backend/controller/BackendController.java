@@ -5,11 +5,18 @@ import com.github.ilham.expense.application.backend.service.BackendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping
 public class BackendController {
     @Autowired
     private BackendService backendService;
+
+    @GetMapping("/expenses/all")
+    public List<Expense> getAllExpenses() {
+        return backendService.getAllExpenses();
+    }
 
     @GetMapping("/expenses/{user}/{month}")
     public String getExpenses(@PathVariable String user, @PathVariable String month) {
