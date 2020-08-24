@@ -16,8 +16,8 @@ public class BackendService {
         return user + " paid x amount in " + month;
     }
 
-    public String postExpense(Expense expense) {
-        return "Posted " + expense.toString();
+    public Expense postExpense(Expense expense) {
+        return backendRepository.save(expense);
     }
 
     public List<Expense> getAllExpenses() {

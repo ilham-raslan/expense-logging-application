@@ -24,7 +24,7 @@ public class BackendController {
     }
 
     @PostMapping("/expenses/publish")
-    public String postExpense(@RequestBody Expense expense) {
+    public Expense postExpense(@RequestBody Expense expense) {
         return backendService.postExpense(expense);
     }
 }
