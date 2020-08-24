@@ -10,7 +10,6 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "expenses")
 public class Expense {
     @Id
     @GeneratedValue
