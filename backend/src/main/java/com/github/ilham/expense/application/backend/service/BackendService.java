@@ -31,6 +31,6 @@ public class BackendService {
     }
 
     public List<Expense> getAllExpenses() {
-        return backendRepository.findAll();
+        return (List<Expense>) backendRepository.findAll();
     }
 }
