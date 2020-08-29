@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping
@@ -18,9 +19,9 @@ public class BackendController {
         return backendService.getAllExpenses();
     }
 
-    @GetMapping("/expenses/{user}/{month}")
-    public String getExpenses(@PathVariable String user, @PathVariable String month) {
-        return backendService.getExpenses(user,month);
+    @GetMapping("/expenses/{user}/{month}/{year}")
+    public Map<String,Object> getExpenses(@PathVariable String user, @PathVariable int month, @PathVariable int year) {
+        return backendService.getExpenses(user,month,year);
     }
 
     @PostMapping("/expenses/publish")

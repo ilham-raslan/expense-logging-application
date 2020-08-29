@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface BackendRepository extends CrudRepository<Expense,Long> {
+public interface BackendRepository extends CrudRepository<Expense,Long>, BackendRepositoryCustom {
     List<Expense> findAll();
-    Expense findById(long id);
+    List<List<Object>> getCategorisedExpensesByUserMonthAndYear(String user, int month, int year);
 }
